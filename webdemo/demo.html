@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Website Monitoring and Controlling BMS System</title>
+<meta name="description" content="" />
+<meta name="Author" content="Dorin Grigoras [www.stepofweb.com]" />
+
+<!-- mobile settings -->
+<meta name="viewport"
+	content="width=device-width, maximum-scale=1, initial-scale=1, user-scalable=0" />
+
+<!-- WEB FONTS : use %7C instead of | (pipe) -->
+<link
+	href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600%7CRaleway:300,400,500,600,700%7CLato:300,400,400italic,600,700"
+	rel="stylesheet" type="text/css" />
+
+<!-- CORE CSS -->
+<link href="assets/plugins/bootstrap/css/bootstrap.min.css"
+	rel="stylesheet" type="text/css" />
+
+<!-- THEME CSS -->
+<link href="assets/css/essentials.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/layout.css" rel="stylesheet" type="text/css" />
+
+<!-- PAGE LEVEL STYLE -->
+<link href="assets/css/header-1.css" rel="stylesheet" type="text/css" />
+<link href="assets/css/color_scheme/green.css" rel="stylesheet"
+	type="text/css" id="color_scheme" />
+
+<!-- DATATABLES -->
+<link href="assets/css/layout-datatables.css" rel="stylesheet"
+	type="text/css" />
+</head>
+<body class="smoothscroll enable-animation">
+	<form id="form1" runat="server">
+
+
+		<div id="slidetop">
+
+			<div class="container">
+
+				<div class="row">
+
+					<div class="col-md-4">
+						<h6>
+							<i class="icon-heart"></i> CHÀO MỪNG ĐẾN VỚI HỆ THỐNG HVAC!
+						</h6>
+						<ul class="list-unstyled">
+							<li><i class="fa fa-angle-right"></i> DỄ THƯƠNG</li>
+							<li><i class="fa fa-angle-right"></i> SIÊNG NĂNG</li>
+							<li><i class="fa fa-angle-right"></i> NHIỆT HUYẾT</li>
+
+						</ul>
+					</div>
+
+					<div class="col-md-4">
+						<h5>
+							<i class="fa-facheck"></i>Với sự hướng dẫn tận tình của thầy
+							Nguyễn Ngọc Âu
+						</h5>
+						<h6>
+							<i class="fa-facheck"></i>Chúng em là
+						</h6>
+						<ul class="list-unstyled">
+							<li><a href="#"><i class="fa fa-angle-right"></i>Phạm
+									Hoàng Nhân</a></li>
+							<li><a href="#"><i class="fa fa-angle-right"></i>Lê
+									Thanh Phương</a></li>
+
+						</ul>
+					</div>
+
+					<div class="col-md-4">
+						<h6>
+							<i class="icon-envelope"></i> THÔNG TIN LIÊN HỆ
+						</h6>
+						<ul class="list-unstyled">
+							<li><b>Address:</b> Trường ĐH Sư phạm Kỹ thuật Tp. Hồ Chí
+								Minh <br /> 01 Võ Văn Ngân, p. Linh Chiểu, Tp. Thủ Đức</li>
+							<li><b>Phone:</b> 0943 820 245</li>
+							<li><b>Email:</b> <a
+								href="mailto:phamhoangnhanmail@gmail.com">phamhoangnhanmail@gmail.com</a></li>
+						</ul>
+					</div>
+
+				</div>
+
+			</div>
+
+			<a class="slidetop-toggle" href="#"></a>
+		</div>
+		<div id="wrapper">
+
+
+			<div id="header" class="navbar-toggleable-md clearfix sticky">
+
+				<header id="topNav">
+					<div class="container">
+
+
+
+						<img src="assets/images/_smarty/hcmute.png" height="90" /> <img
+							src="assets/images/_smarty/clc.png" height="90" />
+
+						<div
+							class="navbar-collapse pull-right nav-main-collapse collapse submenu-dark">
+							<nav class="nav-main">
+
+								<ul id="topMain" class="nav nav-pills nav-main"
+									style="height: 100px;">
+									<li><a href="HomePage.html">TRANG CHỦ</a></li>
+									<li><a href="ThanhVien.html">GIỚI THIỆU</a></li>
+									<li><a href="login.html">DỮ LIỆU HỆ THỐNG</a></li>
+								</ul>
+							</nav>
+						</div>
+
+					</div>
+				</header>
+			</div>
+<style>
+table tr td{
+margin-left: 30px;
+}
+table tr td button: hover{
+color: blue;
+
+}
+table tr td button{
+width: 115px;
+
+border: 1px solid blue;
+ background-color: blue;
+ color: white; 
+ border-radius: 10px;
+ box-shadow: 3px 3px 3px blue;
+ font-size: 20px;
+
+}
+</style>
+		<div style="margin-top: 30px">
+
+			<div style="float: left; margin-right: 200px; margin-left: 50px">
+				<table style="margin-left: 20px">
+					<tr>
+						<div>
+							<td style="color: blue;">Thiết bị</td>
+							<td style="padding: 15px; color: blue;">Giám sát</td>
+						</div>
+					</tr>
+
+					<tr>
+						<td>Quạt</td>
+						<td>
+							<button onclick="ClickFan()" >ON/OFF</button>
+						</td>
+					</tr>
+					<tr>
+						<td>Đèn</td>
+						<td>
+							<button onclick="ClickLamp()">ON/OFF</button>
+						</td>
+					</tr>
+					<tr>
+						<td>Điều hòa</td>
+						<td><button onclick="ClickAir()">ON/OFF</button></td>
+					</tr>
+				</table>
+			</div>
+			<main>
+<style>
+table tr td{
+font-size: 25px;
+margin-left: 30px;
+margin-bottom: 30px;
+}
+table tr td h1{
+font-size: 25px;
+margin-left: 20px;
+margin-bottom: 30px;
+}
+table tr td p{
+color: blue;
+}
+</style>
+				<form style="float: right">
+					<table>
+						<tr>
+							<td><p>Nhiệt độ:</p></td>
+							<td><h1 id="nhietdo"></h1></td>
+
+						</tr>
+						<tr>
+							<td>
+								<p>Độ ẩm:</p>
+							</td>
+							<td><h1 id="doam"></h1></td>
+						</tr>
+						<tr>
+							<td><p>Khí gas:</p></td>
+							<td><h1 id="gas"></h1></td>
+						</tr>
+					</table>
+					<br>
+				</form>
+			</main>
+</div>
+                <!-- FOOTER -->
+        <footer id="footer" style="margin-top: 200px">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <!-- Contact Address -->
+                        <address>
+                            <ul class="list-unstyled">
+                                <li class="footer-sprite address">
+                                    số 1 Võ Văn Ngân<br>
+                                    phường Linh Chiểu, quận Thủ Đức<br>
+                                    thành phố Hồ Chí Minh, Việt Nam<br>
+                                </li>
+                                <li class="footer-sprite phone">
+                                    Số điện thoại: 0943 820 245
+                                </li>
+                                <li class="footer-sprite email">
+                                    <a href="mailto:phamhoangnhanmail@gmail.com">phamhoangnhanmail@gmail.com</a>
+                                </li>
+                            </ul>
+                            <p> </p>
+                        </address>
+                        <!-- /Contact Address -->
+                    </div>
+                        
+                    </div>
+                </div>
+            </div>			
+        </footer>
+    <!-- /FOOTER -->
+			<script
+				src="https://www.gstatic.com/firebasejs/8.2.10/firebase-app.js"></script>
+			<script
+				src="https://www.gstatic.com/firebasejs/8.2.10/firebase-database.js"></script>
+
+			<script
+				src="https://www.gstatic.com/firebasejs/8.2.10/firebase-analytics.js"></script>
+			<script type="module">
+        
+        const firebaseConfig = {
+          apiKey: "AIzaSyDy9VHkyYassAJsMGZGY8CRYNsAPPX4rUM",
+          authDomain: "webj-a8ed2.firebaseapp.com",
+          projectId: "webj-a8ed2",
+          storageBucket: "webj-a8ed2.appspot.com",
+          messagingSenderId: "652736526047",
+          appId: "1:652736526047:web:cce0049657a241b04cdb6a",
+          measurementId: "G-3HDCX3HN1W"
+        };
+      
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        firebase.analytics();
+
+        //đưa giá trị nhiệt độ
+        var nhietDo = document.getElementById('nhietdo');
+        var dbRef = firebase.database().ref('Các Thông Số').child('Nhiệt Độ');   
+        dbRef.on('value', snap => nhietDo.innerText = snap.val()+" C");
+        //đưa giá trị độ ẩm
+        var doAm = document.getElementById('doam');
+        var dbRef = firebase.database().ref('Các Thông Số').child('Độ Ẩm');   
+        dbRef.on('value', snap => doAm.innerText = snap.val()+ " %");
+        //đưa giá trị khí gas
+        var khiGas = document.getElementById('gas');
+        var dbRef = firebase.database().ref('Các Thông Số').child('Khí Gas');   
+        dbRef.on('value', snap => khiGas.innerText = snap.val()+" ppm");
+
+    function WriteDataToFirebase(lamp,fan,air){
+    firebase.database().ref("TTT").set({
+    Den: lamp,
+    Quat: fan,
+    Maylanh: air
+    })
+    var dbRefFan = firebase.database().ref('TTT').child('Quat');
+    dbRefFan.on('value',snap =>{
+    if(snap.val()=="1"){
+        stateFan=true;
+        valueFan="1";
+    }else if(snap.val()=="0"){
+        stateFan=false;
+        valueFan="0";
+    }
+    })
+    var dbRefAir = firebase.database().ref('TTT').child('Maylanh');
+    dbRefAir.on('value',snap =>{
+    if(snap.val()=="1"){
+        stateAir=true;
+        valueAir="1";
+    }else if(snap.val()=="0"){
+        stateAir=false;
+        valueAir="0";
+    }
+    })
+    var dbRefLamp = firebase.database().ref('TTT').child('Den');
+    dbRefLamp.on('value',snap =>{
+    if(snap.val()=="1"){
+        stateLamp=true;
+        valueLamp="1";
+    }else if(snap.val()=="0"){
+        stateLamp=false;
+        valueLamp="0";
+    }
+    })
+}
+
+</script>
+			<script src="demo.js"></script>
+</body>
+</html>
